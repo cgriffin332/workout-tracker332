@@ -1,1 +1,18 @@
-let mongoose = require("mongoose");
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const WorkoutSchema = new Schema({
+  name: {
+    type: String,
+    trim: true,
+    required: "Ingredient name is required.",
+  },
+  isVegetarian: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+const Workout = mongoose.model("Workout", WorkoutSchema);
+
+module.exports = Workout;
