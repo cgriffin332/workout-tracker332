@@ -2,15 +2,28 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const WorkoutSchema = new Schema({
+  day: {
+    type: Date,
+    default: new Date().setDate(new Date().getDate())
+  },
+  type: {
+    type: String,
+    trim: true,
+    required: "Type is required.",
+  },
   name: {
     type: String,
     trim: true,
-    required: "Ingredient name is required.",
+    required: "Name is required.",
   },
-  isVegetarian: {
-    type: Boolean,
-    default: false,
+  duration: {
+    type: Number,
+    required: true,
   },
+  distance: Number,
+  weight: Number,
+  reps: Number,
+  sets: Number,
 });
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
