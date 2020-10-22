@@ -1,9 +1,12 @@
 const { Router } = require("express");
 const express = require("express");
 const router = express.Router();
+const path = require("path");
 
 const db = require("../models");
 
+
+//API ROUTES
 // find all workouts route
 router.get("/api/workouts", (req, res) => {
   db.Workout.find({})
