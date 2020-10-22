@@ -38,7 +38,7 @@ router.get("/api/workouts/:id", (req, res) => {
     });
 });
 // add one workout route
-router.get("/api/workouts", (req, res) => {
+router.post("/api/workouts", (req, res) => {
   db.Workout.create(req.body)
     .then((newWorkout) => {
       res.json(newWorkout);
@@ -53,7 +53,7 @@ router.get("/api/workouts", (req, res) => {
     });
 });
 // update one workout route
-router.get("/api/workouts/:id", (req, res) => {
+router.put("/api/workouts/:id", (req, res) => {
   db.Workout.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then((updatedWorkout) => {
       res.json(updatedWorkout);
@@ -68,7 +68,7 @@ router.get("/api/workouts/:id", (req, res) => {
     });
 });
 // delete one workout route
-router.get("/api/workouts/:id", (req, res) => {
+router.delete("/api/workouts/:id", (req, res) => {
   db.Workout.findByIdAndDelete(req.params.id)
     .then((deletedWorkout) => {
       res.json(deletedWorkout);

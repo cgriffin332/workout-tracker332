@@ -11,6 +11,7 @@ const workoutsController = require("./controllers/workoutsController");
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/workout",
@@ -39,6 +40,7 @@ app.get("/api/config", (req, res) => {
 });
 
 app.use(workoutsController);
+require("./controllers/htmlRoutes")(app);
 
 
 app.listen(PORT, () => {
