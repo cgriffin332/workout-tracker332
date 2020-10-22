@@ -68,20 +68,20 @@ router.put("/api/workouts/:id", (req, res) => {
     });
 });
 // delete one workout route
-router.delete("/api/workouts/:id", (req, res) => {
-  db.Workout.findByIdAndDelete(req.params.id)
-    .then((deletedWorkout) => {
-      res.json(deletedWorkout);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.json({
-        error: true,
-        data: null,
-        message: "Failed to delete workout.",
-      });
-    });
-});
+// router.delete("/api/workouts/:id", (req, res) => {
+//   db.Workout.findByIdAndDelete(req.params.id)
+//     .then((deletedWorkout) => {
+//       res.json(deletedWorkout);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.json({
+//         error: true,
+//         data: null,
+//         message: "Failed to delete workout.",
+//       });
+//     });
+// });
 
 //export router
 module.exports = router;
