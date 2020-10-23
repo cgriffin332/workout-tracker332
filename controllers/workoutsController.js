@@ -1,12 +1,12 @@
 const { Router } = require("express");
 const express = require("express");
 const router = express.Router();
-const path = require("path");
 
 const db = require("../models");
 
-
 //API ROUTES
+
+//Range route
 router.get("/api/workouts/range", (req, res) => {
   db.Workout.find({})
     .then((foundWorkouts) => {
@@ -68,7 +68,11 @@ router.post("/api/workouts", (req, res) => {
 });
 // update one workout route
 router.put("/api/workouts/:id", (req, res) => {
-  db.Workout.findByIdAndUpdate(req.params.id, {$push: {exercises: req.body}}, { new: true })
+  db.Workout.findByIdAndUpdate(
+    req.params.id,
+    { $push: { exercises: req.body } },
+    { new: true }
+  )
     .then((updatedWorkout) => {
       res.json(updatedWorkout);
     })
@@ -81,21 +85,6 @@ router.put("/api/workouts/:id", (req, res) => {
       });
     });
 });
-// delete one workout route
-// router.delete("/api/workouts/:id", (req, res) => {
-//   db.Workout.findByIdAndDelete(req.params.id)
-//     .then((deletedWorkout) => {
-//       res.json(deletedWorkout);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.json({
-//         error: true,
-//         data: null,
-//         message: "Failed to delete workout.",
-//       });
-//     });
-// });
 
 //export router
 module.exports = router;
