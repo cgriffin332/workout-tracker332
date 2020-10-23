@@ -32,10 +32,10 @@ const WorkoutSchema = new Schema(
   },
   { toJSON: { virtuals: true } }
 );
-
-WorkoutSchema.virtual('totalDuration').get(function() {
+// add virtual for totalDuration
+WorkoutSchema.virtual("totalDuration").get(function () {
   let totalDuration = 0;
-  for (let i = 0; i < this.exercises.length; i++){
+  for (let i = 0; i < this.exercises.length; i++) {
     totalDuration += this.exercises[i].duration;
   }
   return totalDuration;
