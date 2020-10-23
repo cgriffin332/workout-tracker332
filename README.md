@@ -20,7 +20,19 @@ All you need to do is click the link and get working.
 
 ## Usage
 
-With this app, the user is able to view, create, and track daily workouts, including multiple exercises in a workout on a given day. They are able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, they can also track distance traveled.  When the site loads the user is presented with the homepage, which displays the last workout logged.  They can then either press “Continue Workout” or “New Workout”.  By clicking “New Workout”, the user can start a new workout and can choose the type of exercise they want to add.  If they choose “Resistance”, they can fill out a form to add a resistance exercise.  When the user clicks “Add Exercise”, the exercise is added to their current workout.  Similarly, if they choose to add a “Cardio” exercise, they are shown another form to fill out.  Once the user has finished adding exercises, they can push the “Complete” button, and will be taken back to the homepage with their current workout summery.  When the user clicks “Dashboard”, they can view their workout stats.  If they click the “Fitness Tracker” link, they are returned to the home page and can start all over again.
+With this app, the user is able to view, create, and track daily workouts, including multiple exercises in a workout on a given day. They are able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, they can also track distance traveled.  When the site loads the user is presented with the homepage, which displays the last workout logged.  They can then either press “Continue Workout” or “New Workout”.  
+![Image of Start](./public/images/workout1.png)
+By clicking “New Workout”, the user can start a new workout and can choose the type of exercise they want to add.  
+![Image of New](./public/images/workout2.png)
+If they choose “Resistance”, they can fill out a form to add a resistance exercise.  
+![Image of Resistance](./public/images/workout3.png)
+When the user clicks “Add Exercise”, the exercise is added to their current workout.  Similarly, if they choose to add a “Cardio” exercise, they are shown another form to fill out.  
+![Image of Cardio](./public/images/workout4.png)
+Once the user has finished adding exercises, they can push the “Complete” button, and will be taken back to the homepage with their current workout summery.  
+![Image of Complete](./public/images/workout5.png)
+When the user clicks “Dashboard”, they can view their workout stats.  
+![Image of Stats](./public/images/workout6.png)
+If they click the “Fitness Tracker” link, they are returned to the home page and can start all over again.
 
 ## License
 
